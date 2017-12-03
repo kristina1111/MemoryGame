@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+
+    <!--    Style   -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style/custom.css">
+    <!--    JS   -->
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+    <script src="https://cdn.rawgit.com/nnattawat/flip/master/dist/jquery.flip.min.js"></script>
+    <script src="js/main.js"></script>
+
+</head>
+
+<body>
+    <main id="game" class="game">
+        <div id="game-UI">
+            <div id="game-intro">
+                <h1>Memory cards game</h1>
+                <p>This is an awsome game</p>
+            </div>
+            <div id="game-bet">
+                <div class="bet-clicks">
+                    <label for="bet-clicks">You will play on level <span class="game-level"></span>. How many more tries (except the number of card couples) you need to win?</label>
+                    <select name="bet-clicks" id="bet-clicks">
+                        <option value="none">none</option>
+                        <option value="5">5</option>
+                        <option value="10">10</option>
+                        <option value="15">15</option>
+                        <option value="20">20</option>
+                        <option value="25">25</option>
+                        <option value="30">30</option>
+                    </select>
+                    <!--                    <input name="bet-clicks" id="bet-clicks" type="text" placeholder="bet number of tries" />-->
+                </div>
+            </div>
+            <div id="game-stats">
+                <p>Card couples: <span id="game-remaining"></span></p>
+                <p>Tries: <span class="game-score"></span></p>
+                <a class="game-reset" href="">Reset</a>
+            </div>
+            <div id="game-complete">
+                <div id="lose-container">
+                    <h1>You lose!</h1>
+                    <p>You couldn't complete the level in <span class="game-tries"></span> tries (including the number of card couples)</p>
+                </div>
+                <div id="win-container">
+                    <h1>You win!</h1>
+                    <p>Congratulations, you completed the level in <span class="game-score"></span> tries</p>
+                </div>
+                <div id="win-game">
+                    <h1>You win!</h1>
+                    <p>Congratulations, you completed the game!</p>
+                </div>
+                <a class="game-reset button" href="">Play again</a>
+            </div>
+            <a id="game-play" class="button" href="">Play</a>
+        </div>
+        <div class="container">
+            <div id="card-container" class="row">
+                <!--            <div id="card-container-main" class="row"></div>-->
+            </div>
+        </div>
+    </main>
+</body>
+
+</html>
