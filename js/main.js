@@ -78,7 +78,7 @@ $(document).ready(function () {
             if (!firstChoice) {
                 firstChoice = element.attr('id').split('-')[1];
 
-                element.parent().find('.back')
+                element.parent().find('.back .img-container')
                     .css({
                         //                        'margin': '10px'
                     })
